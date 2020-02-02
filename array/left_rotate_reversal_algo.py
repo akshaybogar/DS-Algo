@@ -5,7 +5,7 @@ def reverse_array(arr, start, end):
         end-=1
 
 def left_rotate(arr, d, n):
-    if(d==0):
+    if(d==0 or d==n):
         return
     reverse_array(arr, 0, d-1)
     reverse_array(arr, d, n-1)

@@ -14,6 +14,15 @@ class LinkedList:
         self.head = new_node
         return
 
+    # Inserts node after a given node(prev)
+    def insert(self, prev, data):
+        if not prev:
+            return 'Previous node cannot be null'
+        node = Node(data)
+        node.next = prev.next
+        prev.next = node
+        return
+
     #Utility method to print list
     def print_list(self):
         node = self.head
@@ -23,7 +32,8 @@ class LinkedList:
 
 if __name__ == '__main__':
     linked_list = LinkedList()
-    linked_list.push(3)
-    linked_list.push(2)
-    linked_list.push(1)
+    linked_list.push(4) # 4
+    linked_list.push(2) # 2->4
+    linked_list.push(1) # 1->2->4
+    linked_list.insert(linked_list.head.next, 3) # 1->2->3->4
     linked_list.print_list()

@@ -23,6 +23,18 @@ class LinkedList:
         prev.next = node
         return
 
+    # Inserts node at the end of linked list
+    def append(self, data):
+        node = Node(data)
+        if not self.head:
+            self.head = node
+            return
+        last = self.head
+        while last.next:
+            last = last.next
+        last.next = node
+        return
+
     #Utility method to print list
     def print_list(self):
         node = self.head
@@ -36,4 +48,6 @@ if __name__ == '__main__':
     linked_list.push(2) # 2->4
     linked_list.push(1) # 1->2->4
     linked_list.insert(linked_list.head.next, 3) # 1->2->3->4
+    linked_list.append(5) # 1->2->3->4->5
+    linked_list.append(6) # 1->2->3->4->5->6
     linked_list.print_list()

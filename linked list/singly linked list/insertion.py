@@ -47,7 +47,7 @@ if __name__ == '__main__':
     linked_list.push(4) # 4
     linked_list.push(2) # 2->4
     linked_list.push(1) # 1->2->4
-    linked_list.insert(linked_list.head.next, 3) # 1->2->3->4
+    linked_list.insert(self.head.next, 3) # 1->2->3->4
     linked_list.append(5) # 1->2->3->4->5
     linked_list.append(6) # 1->2->3->4->5->6
     linked_list.print_list()
